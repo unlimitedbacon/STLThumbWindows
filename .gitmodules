@@ -1,0 +1,3 @@
+[submodule "stl-thumb"]
+	path = stl-thumb
+	url = https://github.com/unlimitedbacon/stl-thumb.git

@@ -32,7 +32,7 @@
 	<Fragment>
 		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
       <Component Id="stl_thumb.exe" Guid="16f8b8ad-417e-48d5-8474-d226e6bf7b9d" Win64="yes">
-        <File Id="stl_thumb.exe" Name="stl-thumb.exe" Source="$(var.SolutionDir)..\target\release\stl-thumb.exe" />
+        <File Id="stl_thumb.exe" Name="stl-thumb.exe" Source="$(var.SolutionDir)stl-thumb\target\release\stl-thumb.exe" />
       </Component>
       <Component Id="STLThumbWinShellExtension.dll" Guid="1929088e-7b52-448e-bb60-306a335414de" Win64="yes">
         <File Id="STLThumbWinShellExtension.dll" Name="STLThumbWinShellExtension.dll" Source="$(var.STLThumbWinShellExtension.TargetDir)STLThumbWinShellExtension.dll" />
