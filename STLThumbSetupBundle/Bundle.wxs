@@ -5,7 +5,7 @@
 
   <Bundle
     Name="STL-Thumb"
-    Version="0.1.0"
+    Version="!(bind.packageVersion.X64)"
     Manufacturer="UnlimitedBacon"
     Copyright="© 2018 UnlimitedBacon"
     AboutUrl="https://github.com/unlimitedbacon/stl-thumb"

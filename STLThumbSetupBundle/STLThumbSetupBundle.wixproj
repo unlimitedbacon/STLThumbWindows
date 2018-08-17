@@ -6,7 +6,7 @@
     <ProductVersion>3.10</ProductVersion>
     <ProjectGuid>86d4c1a7-9c64-4325-a344-e3d53fa617f6</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>STL-Thumb</OutputName>
+    <OutputName>STL-Thumb-Setup</OutputName>
     <OutputType>Bundle</OutputType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
