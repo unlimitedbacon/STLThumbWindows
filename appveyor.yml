@@ -11,6 +11,7 @@ install:
   - SET PATH=%PATH%;C:\MinGW\bin
   - rustc -V
   - cargo -V
+  - git submodule update --init --recursive
 
 before_build:
   - cd stl-thumb
