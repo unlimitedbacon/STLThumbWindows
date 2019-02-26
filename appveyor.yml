@@ -28,6 +28,15 @@ artifacts:
   - path: STLThumbSetupBundle\bin\$(CONFIGURATION)\STL-Thumb-Setup.exe
     name: STL-Thumb-Setup
 
+deploy:
+  provider: GitHub
+  auth_token:
+    secure: FSAJyupMH2WSWbApwcD9alLMXmVzFE7fB7umbpowRJW6mzTehBUnVlzx+HCx8oik
+  repository: unlimitedbacon/stl-thumb
+  on:
+    branch: master
+    APPVEYOR_REPO_TAG: true
+
 cache:
   - C:\Users\appveyor\.cargo\registry
   - stl-thumb\target
