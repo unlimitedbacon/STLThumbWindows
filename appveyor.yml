@@ -17,6 +17,10 @@ before_build:
   - cd stl-thumb
   - cargo build --release
 
+artifacts:
+  - path: STLThumbSetupBundle\bin\$(configuration)\STL-Thumb-Setup.exe
+    name: STL-Thumb-Setup
+
 cache:
   - C:\Users\appveyor\.cargo\registry
-  - target
+  - stl-thumb\target
