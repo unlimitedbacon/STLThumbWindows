@@ -1,4 +1,5 @@
 image: Visual Studio 2017
+configuration: Release
 
 environment:
   matrix:
@@ -18,7 +19,7 @@ before_build:
   - cargo build --release
 
 artifacts:
-  - path: STLThumbSetupBundle\bin\$(configuration)\STL-Thumb-Setup.exe
+  - path: STLThumbSetupBundle\bin\$(CONFIGURATION)\STL-Thumb-Setup.exe
     name: STL-Thumb-Setup
 
 cache:
