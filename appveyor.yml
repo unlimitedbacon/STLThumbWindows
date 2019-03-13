@@ -24,6 +24,9 @@ before_build:
   - cd stl-thumb
   - cargo build --release
 
+build:
+  project: STLThumbWindows.sln
+
 artifacts:
   - path: STLThumbSetupBundle\bin\$(CONFIGURATION)\STL-Thumb-Setup.exe
     name: STL-Thumb-Setup
