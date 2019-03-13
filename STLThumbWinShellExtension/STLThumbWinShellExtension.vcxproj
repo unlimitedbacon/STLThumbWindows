@@ -150,10 +150,12 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Windows10Colors\Windows10Colors\Windows10Colors.h" />
     <ClInclude Include="ClassFactory.h" />
     <ClInclude Include="Reg.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Windows10Colors\Windows10Colors\Windows10Colors.cpp" />
     <ClCompile Include="ClassFactory.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="STLThumbnailProvider.cpp" />

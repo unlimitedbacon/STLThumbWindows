@@ -30,6 +30,7 @@ WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
 \*******************************************************************************/
 
 #include "STLThumbnailProvider.h"
+#include "../Windows10Colors/Windows10Colors/Windows10Colors.h"
 #include <Shlwapi.h>
 #include <wincodec.h>
 #include <stdio.h>
@@ -147,7 +148,23 @@ IFACEMETHODIMP STLThumbnailProvider::GetThumbnail(UINT cx, HBITMAP *phbmp,
 {
 	HRESULT hr;
 
+	// Get colors from system theme
+	// =============================
+
+	wchar_t ambient_color[7];
+	wchar_t diffuse_color[7];
+	wchar_t specular_color[] = L"ffffff";
+	windows10colors::AccentColor color;
+	//bool dark_mode;
+
+	hr = windows10colors::GetAccentColor(color);
+	//hr = windows10colors::GetDarkModeEnabled(dark_mode);
+
+	swprintf_s(ambient_color, 7, L"%02x%02x%02x", GetRValue(color.darkest), GetGValue(color.darkest), GetBValue(color.darkest));
+	swprintf_s(diffuse_color, 7, L"%02x%02x%02x", GetRValue(color.accent), GetGValue(color.accent), GetBValue(color.accent));
+
 	// Create a temporary image file
+	// =============================
 	// TODO: Get stl-thumb to dump the image data directly to stdout,
 	// then read the stream directly without making a temporary file
 	// Also TODO: Dump a raw bitmap instead of wasting time compressing
@@ -196,12 +213,12 @@ IFACEMETHODIMP STLThumbnailProvider::GetThumbnail(UINT cx, HBITMAP *phbmp,
 	//LPCWSTR image_filename = L"C:\\Users\\Neo\\Desktop\\cube.png";
 	wchar_t command[MAX_PATH*3+20];
 #ifdef _DEBUG
-	const wchar_t *command_format = L"\"%s\" -vv -s %u \"%s\" \"%s\"";
+	const wchar_t *command_format = L"\"%s\" -vv -s %u -m %s %s %s \"%s\" \"%s\"";
 #else
-	const wchar_t *command_format = L"\"%s\" -s %u \"%s\" \"%s\"";
+	const wchar_t *command_format = L"\"%s\" -s %u -m %s %s %s \"%s\" \"%s\"";
 #endif
 
-	swprintf_s(command, MAX_PATH * 3 + 20, command_format, exe_path, cx, stl_filename, image_filename);
+	swprintf_s(command, MAX_PATH * 3 + 20, command_format, exe_path, cx, ambient_color, diffuse_color, specular_color, stl_filename, image_filename);
 
 #ifdef _DEBUG
 	// Open file for logging stl-thumb output

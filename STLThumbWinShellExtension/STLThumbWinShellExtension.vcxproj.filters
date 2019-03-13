@@ -30,6 +30,9 @@
     <ClInclude Include="Reg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\Windows10Colors\Windows10Colors\Windows10Colors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClassFactory.cpp">
@@ -42,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="STLThumbnailProvider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Windows10Colors\Windows10Colors\Windows10Colors.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
