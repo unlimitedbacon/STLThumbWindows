@@ -1,4 +1,7 @@
 # STLThumbWindows
+
+[![Build status](https://ci.appveyor.com/api/projects/status/ym2e7c0fykkr3f4o?svg=true)](https://ci.appveyor.com/project/unlimitedbacon/stlthumbwindows)
+
 This is the Windows shell extension and Windows installer for [stl-thumb](https://github.com/unlimitedbacon/stl-thumb).
 
 ## Build Instructions
