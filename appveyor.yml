@@ -15,9 +15,9 @@ install:
   - rustc -V
   - cargo -V
   # Clone submodules
-  - move stl-thumb\target .
+  - if exist stl-thumb\target\ move stl-thumb\target .
   - git submodule update --init --recursive
-  - move target stl-thumb\
+  - if exist target\ move target stl-thumb\
 
 before_build:
   # Build stl-thumb
