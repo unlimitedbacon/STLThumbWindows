@@ -7,7 +7,7 @@
     Name="STL-Thumb"
     Version="!(bind.packageVersion.X64)"
     Manufacturer="UnlimitedBacon"
-    Copyright="© 2018 UnlimitedBacon"
+    Copyright="© 2022 UnlimitedBacon"
     AboutUrl="https://github.com/unlimitedbacon/stl-thumb"
     UpgradeCode="23bbe3a4-caa1-41fd-955a-22306099325c"
     Condition="VersionNT >= v5.1">
