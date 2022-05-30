@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="stl-thumb" Language="1033" Version="0.4.1" Manufacturer="UnlimitedBacon" UpgradeCode="fcf12725-03f3-4dfb-9455-bc98fbfb0961">
+	<Product Id="*" Name="stl-thumb" Language="1033" Version="0.5.0" Manufacturer="UnlimitedBacon" UpgradeCode="fcf12725-03f3-4dfb-9455-bc98fbfb0961">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Platform="x64"/>
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
